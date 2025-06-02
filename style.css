@@ -532,8 +532,8 @@ background-color: rgba(255, 255, 255, 0.1);
 
 
 #footer {
-	  background-image: linear-gradient(135deg, #514e54, #959296);
-      background: url('../img/hero-bg.png') no-repeat center center fixed;     
+	background-image: linear-gradient(135deg, #514e54, #959296);
+      background: url('./img/hero-bg.png') no-repeat center center fixed;     
 }
 #footer .footer {
 	min-height: 200px;
