@@ -1,0 +1,427 @@
+/* Reset and base */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+.btn-back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px; /* smaller padding, shorter button */
+  background: linear-gradient(135deg, #6f2486, #565259);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(163, 44, 196, 0.4);
+  
+  /* Align left */
+  align-self: flex-end; /* inside flex container, align left */
+}
+
+
+body {
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: "";
+  background: url('../img/hero-bg.png') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  z-index: -2;
+}
+
+
+#members {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+
+#supervisor {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.supervisor-container {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+
+
+
+
+/* === Enhanced Dyslexia Section Style === */
+.dyslexia-section {
+  background-color: #fdf9ff;
+  padding: 60px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(111, 36, 134, 0.1);
+  margin-top: 40px;
+}
+
+.dyslexia-section .info-paragraph {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(111, 36, 134, 0.08);
+}
+
+.dyslexia-section .info-paragraph p {
+  font-size: 1.7rem;
+  line-height: 2.8rem;
+  color: #2f2f2f;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.dyslexia-section .info-paragraph ul {
+  margin-left: 2rem;
+  margin-top: 10px;
+}
+
+.dyslexia-section .info-paragraph ul li {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.dyslexia-section .info-paragraph ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #6f2486;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+
+
+/* === Dyslexia Info Section Enhancements === */
+.dyslexia-section p {
+  font-size: 1.7rem;
+  color: #333;
+  line-height: 2.7rem;
+  margin-bottom: 20px;
+}
+
+.dyslexia-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.dyslexia-section ul li {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  padding-left: 28px;
+  position: relative;
+  line-height: 2.5rem;
+  color: #444;
+  font-weight: 400;
+}
+
+.dyslexia-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #6f2486; /* match your theme color */
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+/* Keep emoji icons visible when used */
+.dyslexia-section ul li::before {
+  display: none; /* disables dot if emojis are already used */
+}
+
+.btn-back:hover {
+  background: linear-gradient(135deg, #514e54, #959296);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(192, 92, 255, 0.6);
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* this aligns children to the left horizontally */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sections */
+section {
+  padding: 50px 0;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.section-title span {
+  color: rgb(93, 6, 120);
+}
+
+/* Paragraphs */
+p {
+  color: black;
+  font-size: 1.6rem;
+  margin-top: 15px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+
+/* Header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(67, 6, 87, 0.93);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.hamburger {
+  font-size: 2.5rem;
+  color: white;
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-list {
+  position: relative;
+}
+
+.nav-list ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-list ul li a {
+  color: white;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.nav-list ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(201, 162, 218);
+}
+
+
+
+/* CTA Buttons */
+.cta2 {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 18px 36px;
+  background: linear-gradient(135deg, #6f2486, #565259);
+  color: white;
+  text-decoration: none;
+  border: none;
+  width: fit-content;
+  border-radius: 16px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(163, 44, 196, 0.4);
+}
+
+.cta2:hover {
+  background: linear-gradient(135deg, #514e54, #959296);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(192, 92, 255, 0.6);
+}
+
+/* Members Section */
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns side by side */
+  gap: 130px;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .members-grid {
+    grid-template-columns: 1fr; /* Stack in 1 column */
+  }
+}
+
+.member-box {
+  background: #f9f9f9;
+  padding: 40px 30px; /* Increased top/bottom padding */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  min-height: 420px; /* Optional: Increase box height */
+  min-width: 320px;  /* Optional: Wider box if needed */
+}
+
+.member-box:hover {
+  transform: translateY(-10px);
+}
+
+.member-box img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.member-box ul {
+  list-style: none;
+  text-align: left;
+}
+
+.member-box ul li {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+/* Supervisor Section */
+.supervisor-box {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-top: 10px;
+  gap: 40px;
+}
+.member-name {
+  font-weight: bold;
+  color: #4b0055; /* Dark purple */
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+    text-align: center;
+
+}
+
+.member-box ul li:not(.member-name) {
+  color: #666666; /* Gray for other text */
+  font-size: 1.5rem;
+    text-align: center;
+
+}
+
+.supervisor-box img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.supervisor-box p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+/* Diagram */
+.diagram {
+  margin-top: 50px;
+  font-size: large;
+  text-align: center;
+  align-self: center;
+}
+.diagram h3 {
+  margin-bottom: 20px;
+}
+
+.diagram img {
+  max-width: 100%;
+  border-radius: 10px;
+  align-self: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-list ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(67, 6, 87, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: right 0.4s ease;
+  }
+
+  .nav-list ul.active {
+    right: 0;
+  }
+
+  .supervisor-box {
+    flex-direction: column;
+    text-align: center;
+	margin-top: 50px;
+  }
+
+
+}
